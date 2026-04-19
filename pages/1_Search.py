@@ -104,8 +104,10 @@ query = st.text_input(
 with st.expander("⚙ Filters", expanded=False):
     meta = get_all_metadata()
     titles = sorted({m["title"] for m in meta})
+    word_counts = [m["word_count"] for m in meta]
+    wc_min_all, wc_max_all = min(word_counts), max(word_counts)
 
-    col1, col2, col3 = st.columns(3)
+    col1, col2, col3, col4 = st.columns(4)
     with col1:
         book_filter = st.selectbox("Filter by book", ["All books"] + titles)
         filter_title = None if book_filter == "All books" else book_filter
@@ -113,6 +115,12 @@ with st.expander("⚙ Filters", expanded=False):
         k = st.slider("Number of results", 1, 15, 5)
     with col3:
         score_threshold = st.slider("Min similarity %", 0, 80, 0)
+    with col4:
+        wc_range = st.slider(
+            "Chunk size (words)",
+            wc_min_all, wc_max_all,
+            (wc_min_all, wc_max_all),
+        )
 
 # ── Action buttons ─────────────────────────────────────────────────────────────
 col_btn, col_clear, _ = st.columns([1, 1, 6])
@@ -128,7 +136,11 @@ if search_clicked and query.strip():
         results = search(query, k=k, filter_title=filter_title, score_threshold=score_threshold)
     st.session_state.search_results = [(doc.page_content, doc.metadata, sim) for doc, sim in results]
 
-results = st.session_state.search_results
+results = [
+    (text, m, sim)
+    for text, m, sim in st.session_state.search_results
+    if wc_range[0] <= m["word_count"] <= wc_range[1]
+]
 
 # ── Results ────────────────────────────────────────────────────────────────────
 if results:

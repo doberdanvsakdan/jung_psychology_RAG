@@ -18,7 +18,7 @@ I chose this topic because Jung's works are dense, cross-referential, and diffic
 ### Links
 
 - **GitHub repository**: https://github.com/doberdanvsakdan/jung_psychology_RAG  
-- **Live application (Render)**: _[add after deploy]_
+- **Live application (Render)**: https://jung-psychology-rag.onrender.com
 
 ---
 

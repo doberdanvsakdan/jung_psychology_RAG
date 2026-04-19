@@ -15,12 +15,6 @@
 
 I chose this topic because Jung's works are dense, cross-referential, and difficult to navigate linearly. A semantic search engine is genuinely useful here: concepts like *anima*, *individuation*, and *the shadow* appear across all three volumes in subtly different contexts, and keyword search would miss most of the meaningful connections.
 
-### Screenshot
-
-_[Insert screenshot of the Search page with results for "individuation"]_
-
-_[Insert screenshot of the Compare page with 3 strategies side-by-side]_
-
 ### Links
 
 - **GitHub repository**: https://github.com/doberdanvsakdan/jung_psychology_RAG  

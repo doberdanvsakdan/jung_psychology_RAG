@@ -1,6 +1,14 @@
 streamlit
 langchain
 langchain-community
+langchain-huggingface
 langchain-text-splitters
+langchain-experimental
+tiktoken
 chromadb
 sentence-transformers
+torch --index-url https://download.pytorch.org/whl/cpu
+plotly
+matplotlib
+pandas
+numpy

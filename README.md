@@ -1,6 +1,6 @@
 # Arcana Psychologica — Jung RAG Knowledge Base
 
-A semantic search application over the collected works of **Carl Gustav Jung**, built with Streamlit, LangChain, and ChromaDB. Search through 610 passages from three of Jung's most influential books using natural language queries.
+A semantic search application over the collected works of **Carl Gustav Jung**, built with Streamlit, LangChain, and ChromaDB. Search through 610 passages from three of Jung's books using natural language queries.
 
 **Live app**: https://jung-psychology-rag.onrender.com
 

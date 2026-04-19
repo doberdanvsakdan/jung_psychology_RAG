@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.env
+chroma_db/
+literature/
+.venv/
+Build Your Own RAG Knowledge Base.html
+Build Your Own RAG Knowledge Base_files/
